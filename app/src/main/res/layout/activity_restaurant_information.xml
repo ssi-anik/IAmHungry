@@ -1,0 +1,157 @@
+<RelativeLayout android:id="@+id/base_popup_layout"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                tools:context="com.example.anik.iamhungry.RestaurantInformation">
+
+
+    <TextView
+        android:id="@+id/dragSuggestion"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/border"
+        android:gravity="center_horizontal"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="Drag to bottom to close"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#ff299b98"/>
+
+    <Button
+        android:id="@+id/buttonShowRoute"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/dragSuggestion"
+        android:layout_alignRight="@+id/dragSuggestion"
+        android:layout_below="@+id/dragSuggestion"
+        android:background="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="@string/show_me_route"
+        android:textAllCaps="false"
+        android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonShowRoute"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:id="@+id/restaurantName"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:text="Restaurant name"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#000"/>
+
+            <TextView
+                android:id="@+id/restaurantNear"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/restaurantName"
+                android:gravity="right"
+                android:paddingBottom="5dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:text="Restaurant near"
+                android:textColor="#000"/>
+
+            <TextView
+                android:id="@+id/restaurantType"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/restaurantNear"
+                android:gravity="right"
+                android:paddingBottom="5dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:text="Restaurant type"
+                android:textColor="#000"/>
+
+            <TextView
+                android:id="@+id/restaurantOpen"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/restaurantType"
+                android:gravity="right"
+                android:paddingBottom="5dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:text="Restaurant open or close"
+                android:textColor="#000"/>
+
+            <TextView
+                android:id="@+id/restaurantPhoneNumber"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/restaurantOpen"
+                android:gravity="right"
+                android:paddingBottom="5dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:autoLink="phone"
+                android:text="Restaurant phone number"
+                android:textColor="#000"/>
+
+            <TextView
+                android:id="@+id/restaurantPhoneNumberNotFound"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/restaurantPhoneNumber"
+                android:gravity="right"
+                android:paddingBottom="5dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:text="No phone number is given."
+                android:textColor="#000"/>
+
+            <TextView
+                android:id="@+id/restaurantRating"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/restaurantPhoneNumberNotFound"
+                android:gravity="right"
+                android:paddingBottom="5dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:text="Restaurant rating"
+                android:textColor="#000"/>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
